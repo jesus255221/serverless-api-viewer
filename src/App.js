@@ -16,7 +16,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch("http://127.0.0.1:8787").then(res => res.json()).then((res) => this.setState({
+    fetch("https://serverless-api.lh50.workers.dev/").then(res => res.json()).then((res) => this.setState({
       posts: res
     }))
   }
@@ -48,7 +48,7 @@ class App extends Component {
 
   handleSubmit(evt) {
     evt.preventDefault()
-    fetch("http://127.0.0.1:8787", {
+    fetch("https://serverless-api.lh50.workers.dev/", {
       method: "POST",
       headers: {
         'Content-Type': 'application/json'
